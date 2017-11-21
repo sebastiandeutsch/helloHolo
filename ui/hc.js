@@ -1,6 +1,6 @@
 function getBookmarks() {
   $.get("/fn/bookmarks/listBookmarks", "", function(result) {
-    var bookmarks = JSON.parse(bookmarks);
+    var bookmarks = JSON.parse(result);
     console.log(bookmarks);
   });
 };
@@ -11,7 +11,7 @@ function addDummyBookmark() {
     title: "Digital Products gone wild!"
   };
 
-  $.get("/fn/bookmarks/newBookmark?payload", JSON.stringify(bookmark), getBookmarks);
+  $.post("/fn/bookmarks/newBookmark", JSON.stringify(bookmark), getBookmarks);
 }
 
 

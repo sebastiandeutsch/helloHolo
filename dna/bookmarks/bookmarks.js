@@ -31,7 +31,10 @@ function newBookmark(bookmark) {
   debug("Yoyoyo newBookmark")
   debug(bookmark)
   var key = commit("bookmarks", bookmark);
+  var bl_key = commit("bookmarks_links", { Links: [ { Base:App.DNA.Hash, Link: key, Tag: "bookmarks" } ] })
   debug(key);
+  debug(bl_key);
+
   return key
 }
 
