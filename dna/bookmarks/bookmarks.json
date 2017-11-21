@@ -1,0 +1,13 @@
+{
+  "title": "Bookmark",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "required": ["url", "title"]
+}

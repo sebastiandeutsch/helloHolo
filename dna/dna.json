@@ -1,0 +1,53 @@
+{
+    "Version": 1,
+    "UUID": "da3c298e-c708-11e7-a55a-6c4008898138",
+    "Name": "helloHolo",
+    "Properties": {
+        "description": "provides an application template",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "Zomes": [
+          {
+            "Name": "bookmarks",
+            "Description": "Bookmarks controller",
+            "CodeFile": "bookmarks.js",
+            "Entries": [
+                {
+                    "Name": "bookmarks",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "bookmarks.json",
+                    "Sharing": "public"
+                }
+            ],
+            "RibosomeType": "js",
+            "Functions": [
+                {
+                    "Name": "listBookmarks",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "newBookmark",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                }
+            ],
+            "BridgeFuncs": null,
+            "BridgeTo": ""
+        }
+    ],
+    "RequiresVersion": 17,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    }
+}
